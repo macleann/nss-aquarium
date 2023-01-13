@@ -3,10 +3,13 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #202C39;
     text-align: center;
+    overflow-wrap: break-word;
 }
 
     img {
         width: 15em;
+        object-fit: contain;
+        max-width: 100%;
         height: auto;
     }
 
@@ -19,33 +22,40 @@ body {
     }
 
     article {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
+        display: block;
+        float: left;
         margin: 0 auto;
     }
 
-        .fishSection {
+
+        .asideSection {
             display: block;
+            float: right;
+            width: 25%;
         }
 
-            .fishSectionAsideDiv {
-                float: right;
-                width: 25%;
+            aside {
+                margin: 4.16em 5em 0 0;
+                padding: 1em 2em;
+                border-radius: 2em;
+                background-color: #F2D492;
+                text-align: left;
             }
 
-                aside {
-                    margin: 4.16em 5em 0 0;
-                    padding: 1em 2em;
-                    border-radius: 2em;
-                    background-color: #F2D492;
-                    text-align: left;
+                .asideTitle {
+                    text-align: center;
                 }
 
-            .fishSectionDiv {
-                float: left;
-                width: 75%;
+        .mainSection {
+            display: block;
+            float: left;
+            width: 75%;
+        }
+        
+            .fishSection {
+            
             }
+
                 .fishEntry {
                     margin: 1em 5em 1em 2.5em;
                     border-radius: 2em;
@@ -55,11 +65,8 @@ body {
 
                     .fishEntryDiv {
                         display: flex;
-                    }
-
-                        .fishImg {
-                            object-fit: contain;
-                        }    
+                        flex-wrap: wrap;
+                    }  
 
                         .fishInfoDiv {
                             display: flex;
@@ -67,74 +74,73 @@ body {
                             padding: 1em 2em;
                             text-align: left;
                         }
-        
-        .quoteSection {
             
-        }
-
-            .quoteDivParent {
-                display: flex;
-                justify-content: center;
+            .quoteSection {
+                margin: 3em auto;
             }
-        
-                .quoteDivLeft {
-                    display: block;
-                    float: left;
-                    margin: 1em 2.5em 1em 5em;
-                }
 
-                .quoteDivRight {
-                    display: block;
-                    float: right;
+                .quoteList {
+                    display: flex;
+                    justify-content: center;
                     margin: 1em 5em 1em 2.5em;
-
+                    padding: 1em 2em;
+                    border-radius: 2em;
+                    background-color: #F2D492;
                 }
-
-        .locationSection {
-            display: flex;
-            flex-flow: column wrap;
-            justify-content: center;
-        }
-
-            #locationMap {
-                width: 60em;
-                height: 40em;
-            }
-
-            .locationListSection {
-
-            }
-
-                .locationDivLeft {
-                    display: block;
-                    float: left;
-                    width: 50%
-                }
-
-                .locationDivRight {
-                    display: block;
-                    float: right;
-                    width: 50%;
-                }
-
-                    .locationEntry {
-                        margin: 1em 5em 1em 2.5em;
-                        border-radius: 2em;
-                        background-color: #F2D492;
-                        padding: 1em 2em;
+            
+                    .quoteListLeft {
+                        display: block;
+                        float: left;
+                        margin: 1em 2.5em 1em 5em;
                     }
 
-                        .locationEntryDiv {
-                            display: flex;
+                    .quoteListRight {
+                        display: block;
+                        float: right;
+                        margin: 1em 5em 1em 2.5em;
+                    }
+
+            .locationSectionContainer {
+                
+            }
+
+                #locationMap {
+                    width: 60em;
+                    max-width: 85%;
+                    height: 40em;
+                }
+
+                .locationEntries {
+                    display: flex;
+                }
+
+                    .locationEntriesLeft {
+                        display: block;
+                        float: left;
+                        width: 50%
+                    }
+
+                    .locationEntriesRight {
+                        display: block;
+                        float: right;
+                        width: 50%;
+                    }
+
+                        .locationEntry {
+                            margin: 1em 5em 1em 2.5em;
+                            border-radius: 2em;
+                            background-color: #F2D492;
+                            padding: 1em 2em;
                         }
 
-                            .locationImg {
-                                object-fit: contain;
+                            .locationEntryFlex {
+                                display: flex;
+                                flex-wrap: wrap;
                             }
 
-                            .locationInfoDiv {
-                                display: flex;
-                                flex-flow: column wrap;
-                                padding: 1em 2em;
-                                text-align: left;
-                            }
+                                .locationInfoColumn {
+                                    display: flex;
+                                    flex-flow: column wrap;
+                                    padding: 1em 2em;
+                                    text-align: left;
+                                }

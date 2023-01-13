@@ -1,7 +1,17 @@
-import { getFish } from './database.js'
+// Import the FishList function from the correct module
+import { FishList } from './FishList.js'
+import { LocationList } from './LocationList.js'
 
-const allFish = getFish()
+/*
+    What is the CSS selector for the element where you
+    want to display the fish?
 
-for (const fish of allFish) {
-    console.log(fish)
-}
+    Use . for elements with a "class" attribute
+    Use # for elements with an "id" attribute
+ */
+const fishHTMLElement = document.querySelector("#fishSectionScript")
+const locationHTMLElement = document.querySelector("#locationSectionScript")
+
+
+fishHTMLElement.innerHTML = FishList()
+locationHTMLElement.innerHTML = LocationList()

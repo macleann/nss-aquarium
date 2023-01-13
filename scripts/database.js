@@ -106,7 +106,7 @@ const database = {
             species: "Black Ghost Knife Fish",
             length: 51,
             nickname: "Trouble",
-            harvestLocationId: "Carmen del Paraná, Paraguay",
+            harvestLocationId: 9,
             dietTypeId: 3
         },
     ],
@@ -196,4 +196,12 @@ const database = {
 
 export const getFish = () => {
     return database.fish.map(fish => ({...fish}))
+}
+
+export const getFood = () => {
+    return database.fishFood.map(fishFood => ({...fishFood}))
+}
+
+export const getLocations = () => {
+    return database.harvestLocations.map(harvestLocations => ({...harvestLocations}))
 }
